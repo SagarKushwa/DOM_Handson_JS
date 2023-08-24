@@ -1,0 +1,55 @@
+body
+{
+    background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; */
+}
+
+h1
+{
+    margin-left: 20px;
+}
+
+p
+{
+    margin-left: 40px;
+    color:darkslategray;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h2
+{
+    margin-left: 50px;
+    color: midnightblue;
+}
+
+.container 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card 
+{
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#clock
+{
+    width: 210px;
+    margin-left: 100px;
+    font-size: 60px;
+    color: green;
+}

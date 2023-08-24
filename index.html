@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Handson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Question:1 - Write the code to access element which is having id as "text".</h1>
+    <p>Answer:-</p>
+    <h2>documen.getElementById("text")</h2>
+    <p>Example:-</p>
+    <p><h2 id="text">Prepbytes</h2></p>
+    <script>
+        var element = document.getElementById("text");
+        element.innerHTML= "Elevation Academy: Prepbytes.";
+    </script>
+    <hr>
+    <h1>Question:2 - Write the code to access element which is having tag as "h1"</h1>
+    <p>Answer:-</p>
+    <h2>documen.getElementByTagName("h2")</h2>
+    <hr>
+    <h1>Question:3 - Write the code to access element which is having class as "box"</h1>
+    <p>Answer:-</p>
+    <h2>document.getElementsByClassName("box")</h2>
+    <hr>
+    <h1>Question:4 - Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</h1>
+    <p>Answer:-</p>
+    <h2 id="helloheading">Hello</h2>
+    <script>
+        var headingElement = document.getElementById("helloheading");
+        headingElement.innerHTML = "Hello World";
+    </script>
+    <hr>
+    <h1>Question:5 - Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</h1>
+    <p>Answer:-</p>
+    <h2 id="content">Hello World</h2>
+    <h2><button id="replaceButton">Replace Text</button></h2>
+    <script>
+        var replacebtn = document.getElementById("replaceButton");
+        var contentelement = document.getElementById("content");
+        replacebtn.addEventListener("click", function() {
+            contentelement.innerHTML = "Welcome to Elevation Academy";
+        });
+    </script>
+    <hr>
+    <h1>Question:6 - Add one style attribute and give text color as red and id attribute and give the id value as "heading" in the above given h1 tag using DOM functions"</h1>
+    <p>Answer:-</p>
+    <h2 id="myheading">Hello</h2>
+    <script>
+        var headingelement = document.getElementById("myheading");
+        headingelement.style.color = "red";
+        headingelement.id = "heading";
+    </script>
+    <hr>
+    <h1>Question:7 - Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</h1>
+    <p>Answer:-</p>
+    <div class="container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+    <h2><button id="changedirection">Change Flex Direction</button></h2>
+    <script>
+        var container = document.querySelector('.container');
+        var changedirectionbutton = document.getElementById('changedirection');
+        changedirectionbutton.addEventListener('click', function() {
+            if (container.style.flexDirection === 'column') {
+                container.style.flexDirection = 'row';
+            } else {
+                container.style.flexDirection = 'column';
+            }
+        });
+    </script>
+    <hr>
+    <h1>Question:8 - What is the difference between window vs document?</h1>
+    <p>Answer:-</p>
+    <h2>The main difference between window and document is that window represents the browser window and provides access to browser-level functionalities, while document represents the currently loaded HTML document and provides access to the structure and content of the web page. They are closely related and often used together in web development to create dynamic and interactive web applications.</h2>
+    <hr>
+    <h1>Question:9 - Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second.</h1>
+    <p>Answer:-</p>
+    <div id="clock">00:00:00</div>
+    <script>
+        let clocktime = document.getElementById("clock");
+        function clockstart()
+        {
+            let time = new Date();
+            let hrs= time.getHours();
+            let min = time.getMinutes();
+            let sec= time.getSeconds();
+            clocktime.innerHTML=` ${hrs}:${min}:${sec}`
+        }
+        setInterval(() => 
+        {
+            clockstart();
+        }, 1000);
+    </script>
+    <hr>
+    <br><br><br>
+</body>
+</html>
